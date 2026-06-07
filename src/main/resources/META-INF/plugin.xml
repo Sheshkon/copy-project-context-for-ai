@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>com.aicontext.copy-project-context</id>
+    <name>Copy Project Context for AI</name>
+    <vendor email="support@example.com" url="https://github.com/example/copy-project-context-for-ai">AI Context Builder</vendor>
+
+    <!-- Patched from description.html at build time -->
+    <description/>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="Copy Project Context for AI" displayType="BALLOON"/>
+        <applicationService
+                serviceImplementation="com.aicontext.plugin.services.SettingsService"/>
+        <applicationConfigurable
+                parentId="tools"
+                instance="com.aicontext.plugin.settings.PluginSettingsConfigurable"
+                id="com.aicontext.plugin.settings.PluginSettingsConfigurable"
+                displayName="Copy Project Context for AI"/>
+    </extensions>
+
+    <actions>
+        <action id="com.aicontext.plugin.CopyProjectContextAction"
+                class="com.aicontext.plugin.actions.CopyProjectContextAction"
+                text="Copy Selected to AI"
+                description="Copy selected files and folders as AI-friendly project context to the clipboard">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
