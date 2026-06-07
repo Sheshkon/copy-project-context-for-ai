@@ -113,6 +113,10 @@ Context menu:
 
 ![Context menu](docs/images/context-menu.png)
 
+Settings menu:
+
+![Context menu](docs/images/settings.png)
+
 Example output:
 
 ![Output example](docs/images/output-example.png)
